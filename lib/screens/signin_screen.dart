@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:for_eve/screens/signup_screen.dart';
 import 'package:for_eve/widgets/custom_text_field.dart';
 
 import '../widgets/custom_button.dart';
@@ -100,9 +101,21 @@ class SigninScreen extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  CustomButton(
-                    text: 'Sign Up',
-                    color: const Color(0xffada6c5),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const SignUpScreen();
+                          },
+                        ),
+                      );
+                    },
+                    child: CustomButton(
+                      text: 'Sign Up',
+                      color: const Color(0xffada6c5),
+                    ),
                   ),
                 ],
               ),
