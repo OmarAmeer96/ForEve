@@ -4,8 +4,10 @@ import 'package:for_eve/widgets/custom_text_field.dart';
 
 import '../widgets/custom_button.dart';
 
-class SigninScreen extends StatelessWidget {
-  const SigninScreen({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
+
+  static String id = 'SignInScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,10 @@ class SigninScreen extends StatelessWidget {
           right: 16,
         ),
         child: Center(
-          child: Column(
+          child: ListView(
             children: [
               const SizedBox(
-                height: 80,
+                height: 60,
               ),
               Image.asset(
                 'assets/images/logo2.jpg',
@@ -103,14 +105,7 @@ class SigninScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const SignUpScreen();
-                          },
-                        ),
-                      );
+                      Navigator.pushNamed(context, SignUpScreen.id);
                     },
                     child: CustomButton(
                       text: 'Sign Up',

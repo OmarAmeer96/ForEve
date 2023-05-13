@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:for_eve/screens/signin_screen.dart';
+import 'package:for_eve/screens/signup_screen.dart';
 
 void main() {
   runApp(const ForEve());
@@ -10,9 +11,13 @@ class ForEve extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      routes: {
+        SignInScreen.id: (context) => const SignInScreen(),
+        SignUpScreen.id: (context) => const SignUpScreen(),
+      },
       debugShowCheckedModeBanner: false,
-      home: SigninScreen(),
+      initialRoute: 'SignInScreen',
     );
   }
 }

@@ -6,6 +6,8 @@ import '../widgets/custom_text_field.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
+  static String id = 'SignUpScreen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +18,10 @@ class SignUpScreen extends StatelessWidget {
           right: 16,
         ),
         child: Center(
-          child: Column(
+          child: ListView(
             children: [
               const SizedBox(
-                height: 80,
+                height: 60,
               ),
               Image.asset(
                 'assets/images/logo2.jpg',
@@ -100,9 +102,14 @@ class SignUpScreen extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  CustomButton(
-                    text: 'Sign In',
-                    color: const Color(0xffada6c5),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: CustomButton(
+                      text: 'Sign In',
+                      color: const Color(0xffada6c5),
+                    ),
                   ),
                 ],
               ),
