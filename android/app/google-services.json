@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788886365013",
+    "project_id": "for-eve-6ecbc",
+    "storage_bucket": "for-eve-6ecbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788886365013:android:036edd0d8a13badd9b05dc",
+        "android_client_info": {
+          "package_name": "com.example.for_eve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788886365013-c6uqsvb15i31osii5p9ijlfne550c809.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi7_vX9oh7cnVClBp_fpVyRyovtXzD4Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788886365013-c6uqsvb15i31osii5p9ijlfne550c809.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

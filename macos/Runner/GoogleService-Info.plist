@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>788886365013-veup9b5cp4vmc9ue4e6gidrveab11hki.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.788886365013-veup9b5cp4vmc9ue4e6gidrveab11hki</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDGkBRTHKAJ-IZNMmapIJQ7YlTp8JNgio4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>788886365013</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.forEve.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>for-eve-6ecbc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>for-eve-6ecbc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:788886365013:ios:5e739ed640db4e089b05dc</string>
+</dict>
+</plist>
