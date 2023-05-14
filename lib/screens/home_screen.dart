@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:for_eve/widgets/custom_container.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key});
@@ -93,7 +94,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 150,
+                height: 140,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -133,10 +134,51 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: 150,
+                height: 280,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(50)),
+                ),
+                child: Column(
+                  children: [
+                    const Spacer(
+                      flex: 2,
+                    ),
+                    const Text(
+                      'Mood Tracker',
+                      style: TextStyle(
+                        color: Color(0xff493b8f),
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 2,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(height: 90, width: 65),
+                      ],
+                    ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomContainer(),
+                        CustomContainer(),
+                        CustomContainer(),
+                      ],
+                    ),
+                    const Spacer(
+                      flex: 2,
+                    ),
+                  ],
                 ),
               ),
               const Spacer(
@@ -144,10 +186,30 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: 150,
+                height: 200,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(50)),
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Mood Tracker',
+                      style: TextStyle(
+                        color: Color(0xff493b8f),
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(height: 90, width: 65),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               const Spacer(
