@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      // ignore: body_might_complete_normally_nullable
       validator: (data) {
         if (data!.isEmpty) {
           return 'This field is required';

@@ -17,15 +17,15 @@ class HomeScreen extends StatelessWidget {
         leadingWidth: 50,
         leading: PopupMenuButton<int>(
           itemBuilder: (context) => [
-            PopupMenuItem(
+            const PopupMenuItem(
               value: 1,
               child: Text('Button 1'),
             ),
-            PopupMenuItem(
+            const PopupMenuItem(
               value: 2,
               child: Text('Button 2'),
             ),
-            PopupMenuItem(
+            const PopupMenuItem(
               value: 3,
               child: Text('Button 3'),
             ),
