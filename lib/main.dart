@@ -21,8 +21,8 @@ class ForEve extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        SignInScreen.id: (context) => const SignInScreen(),
-        SignUpScreen.id: (context) => SignUpScreen(),
+        SignInScreen.id: (context) => SignInScreen(),
+        SignUpScreen.id: (context) => const SignUpScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
       },
       debugShowCheckedModeBanner: false,
