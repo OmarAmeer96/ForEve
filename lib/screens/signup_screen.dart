@@ -81,6 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               Expanded(
                                 child: CustomTextField(
+                                  obscureText: false,
                                   onChanged: (data) {
                                     email = data;
                                   },
@@ -106,6 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               ),
                               Expanded(
                                 child: CustomTextField(
+                                  obscureText: true,
                                   onChanged: (data) {
                                     password = data;
                                   },

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:for_eve/screens/contact_screen.dart';
 import 'package:for_eve/screens/home_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/screens/signup_screen.dart';
@@ -24,6 +25,7 @@ class ForEve extends StatelessWidget {
         SignInScreen.id: (context) => SignInScreen(),
         SignUpScreen.id: (context) => const SignUpScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
+        ContactScreen.id: (context) => const ContactScreen(),
       },
       debugShowCheckedModeBanner: false,
       initialRoute: 'SignInScreen',

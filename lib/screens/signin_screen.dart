@@ -80,6 +80,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               ),
                               Expanded(
                                 child: CustomTextField(
+                                  obscureText: false,
                                   onChanged: (data) {
                                     email = data;
                                   },
@@ -105,6 +106,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               ),
                               Expanded(
                                 child: CustomTextField(
+                                  obscureText: true,
                                   onChanged: (data) {
                                     password = data;
                                   },
