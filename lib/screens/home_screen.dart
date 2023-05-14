@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:for_eve/widgets/custom_container.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key});
@@ -158,10 +159,30 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomContainer(height: 90, width: 65),
-                        CustomContainer(height: 90, width: 65),
-                        CustomContainer(height: 90, width: 65),
-                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Sat',
+                          icon: FontAwesomeIcons.faceSmileBeam,
+                        ),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Sun',
+                          icon: FontAwesomeIcons.faceFlushed,
+                        ),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Mon',
+                          icon: FontAwesomeIcons.faceSadTear,
+                        ),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Tue',
+                          icon: FontAwesomeIcons.faceDizzy,
+                        ),
                       ],
                     ),
                     const Spacer(
@@ -170,9 +191,24 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomContainer(),
-                        CustomContainer(),
-                        CustomContainer(),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Wed',
+                          icon: FontAwesomeIcons.faceFrown,
+                        ),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Thu',
+                          icon: FontAwesomeIcons.faceGrimace,
+                        ),
+                        CustomContainer(
+                          height: 90,
+                          width: 65,
+                          text: 'Fri',
+                          icon: FontAwesomeIcons.question,
+                        ),
                       ],
                     ),
                     const Spacer(
@@ -186,28 +222,52 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                height: 200,
+                height: 220,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(50)),
                 ),
                 child: Column(
                   children: [
+                    const Spacer(
+                      flex: 2,
+                    ),
                     const Text(
-                      'Mood Tracker',
+                      'How are you feeling today?',
                       style: TextStyle(
                         color: Color(0xff493b8f),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    const Spacer(
+                      flex: 2,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomContainer(height: 90, width: 65),
-                        CustomContainer(height: 90, width: 65),
-                        CustomContainer(height: 90, width: 65),
+                        CustomContainer(
+                          height: 110,
+                          width: 85,
+                          text: 'Very Good',
+                          icon: FontAwesomeIcons.faceLaugh,
+                        ),
+                        CustomContainer(
+                          height: 110,
+                          width: 85,
+                          text: 'Good',
+                          icon: FontAwesomeIcons.faceSmileBeam,
+                        ),
+                        CustomContainer(
+                          height: 110,
+                          width: 85,
+                          text: 'Sad',
+                          icon: FontAwesomeIcons.faceFrown,
+                        ),
                       ],
+                    ),
+                    const Spacer(
+                      flex: 3,
                     ),
                   ],
                 ),
@@ -218,28 +278,58 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      width: 100,
+                      height: 65,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: const Center(
+                        child: FaIcon(
+                          Icons.home_outlined,
+                          size: 60,
+                          color: Color(0xffa69fbd),
+                        ),
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      width: 100,
+                      height: 65,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: const Center(
+                        child: FaIcon(
+                          Icons.face_4_outlined,
+                          size: 55,
+                          color: Color(0xffa69fbd),
+                        ),
+                      ),
                     ),
                   ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Container(
+                      width: 100,
+                      height: 65,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: const Center(
+                        child: FaIcon(
+                          Icons.chat,
+                          size: 55,
+                          color: Color(0xffa69fbd),
+                        ),
+                      ),
                     ),
                   ),
                 ],
