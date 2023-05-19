@@ -144,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   ),
                                 );
                                 // ignore: use_build_context_synchronously
-                                Navigator.pushNamed(context, HomeScreen.id);
+                                Navigator.pushNamed(context, HomeScreen.id, arguments: email);
                               } on FirebaseAuthException catch (e) {
                                 if (e.code == 'weak-password') {
                                   ScaffoldMessenger.of(context).showSnackBar(

@@ -12,6 +12,7 @@ import 'package:for_eve/screens/meeting_screen.dart';
 import 'package:for_eve/screens/pre_meeting_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/screens/signup_screen.dart';
+import 'package:for_eve/screens/user_profile.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -41,6 +42,7 @@ class ForEve extends StatelessWidget {
         SusanBlackmore.id: (context) => const SusanBlackmore(),
         PaulEkman.id: (context) => const PaulEkman(),
         MeetingScreen.id: (context) => const MeetingScreen(),
+        UserProfile.id: (context) => const UserProfile(),
       },
       debugShowCheckedModeBanner: false,
       initialRoute: 'SignInScreen',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:for_eve/screens/contact_screen.dart';
 import 'package:for_eve/screens/pre_meeting_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
+import 'package:for_eve/screens/user_profile.dart';
 import 'package:for_eve/widgets/custom_container.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -373,18 +374,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      height: 65,
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: const Center(
-                        child: FaIcon(
-                          Icons.face_4_outlined,
-                          size: 55,
-                          color: Color(0xffa69fbd),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, UserProfile.id);
+                      },
+                      child: Container(
+                        width: 100,
+                        height: 65,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: const Center(
+                          child: FaIcon(
+                            Icons.face_4_outlined,
+                            size: 55,
+                            color: Color(0xffa69fbd),
+                          ),
                         ),
                       ),
                     ),

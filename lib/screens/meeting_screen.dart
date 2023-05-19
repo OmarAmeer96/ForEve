@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:for_eve/screens/home_screen.dart';
+import 'package:for_eve/screens/user_profile.dart';
 import 'package:for_eve/widgets/custom_text_field.dart';
 
 import 'contact_screen.dart';
@@ -134,18 +135,23 @@ class MeetingScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      height: 65,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffa69fbd),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: const Center(
-                        child: FaIcon(
-                          Icons.face_4_outlined,
-                          size: 55,
-                          color: Colors.white,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, UserProfile.id);
+                      },
+                      child: Container(
+                        width: 100,
+                        height: 65,
+                        decoration: const BoxDecoration(
+                          color: Color(0xffa69fbd),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: const Center(
+                          child: FaIcon(
+                            Icons.face_4_outlined,
+                            size: 55,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
