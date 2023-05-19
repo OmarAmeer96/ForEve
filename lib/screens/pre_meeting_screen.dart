@@ -9,10 +9,27 @@ import 'package:for_eve/screens/Susan_Blackmore_screen.dart';
 import 'package:for_eve/widgets/custom_therapist_card.dart';
 import 'contact_screen.dart';
 
-class PreMeetingScreen extends StatelessWidget {
-  const PreMeetingScreen({super.key});
+// ignore: must_be_immutable
+class PreMeetingScreen extends StatefulWidget {
+  PreMeetingScreen({Key? key}) : super(key: key);
 
   static String id = 'MeetingScreen';
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _PreMeetingScreenState createState() => _PreMeetingScreenState();
+}
+
+class _PreMeetingScreenState extends State<PreMeetingScreen> {
+  String? selectedDay;
+
+  bool mondaySelected = false;
+  bool tuesdaySelected = false;
+  bool wednesdaySelected = false;
+  bool thursdaySelected = false;
+  bool fridaySelected = false;
+  bool saturdaySelected = false;
+  bool sundaySelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +75,6 @@ class PreMeetingScreen extends StatelessWidget {
                           children: [
                             const Text(
                               'Choose the Therapist (If more than one is selected, only the available doctor will be selected.)',
-                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -137,6 +153,236 @@ class PreMeetingScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0xffa69fbd),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            const Text(
+                              'When would you like the meeting with the therapist be?',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Saturday'),
+                              value: 'Monday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Sunday'),
+                              value: 'Tuesday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Monday'),
+                              value: 'Wednesday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Tuesday'),
+                              value: 'Thursday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Wednesday'),
+                              value: 'Friday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Thursday'),
+                              value: 'Saturday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(() {
+                                  selectedDay = value;
+                                });
+                              },
+                            ),
+                            RadioListTile<String>(
+                              title: const Text('Friday'),
+                              value: 'Sunday',
+                              groupValue: selectedDay,
+                              onChanged: (value) {
+                                setState(
+                                  () {
+                                    selectedDay = value;
+                                  },
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0xffa69fbd),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            const Text(
+                              'How are feeling now?',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Anxiety'),
+                              value: mondaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  mondaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Depression'),
+                              value: tuesdaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  tuesdaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Self-esteem'),
+                              value: wednesdaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  wednesdaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Relationships'),
+                              value: thursdaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  thursdaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Hormones'),
+                              value: fridaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  fridaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Body image'),
+                              value: saturdaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  saturdaySelected = value!;
+                                });
+                              },
+                            ),
+                            CheckboxListTile(
+                              title: const Text('Motherhood'),
+                              value: sundaySelected,
+                              onChanged: (value) {
+                                setState(() {
+                                  sundaySelected = value!;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: GestureDetector(
+                        onTap: () {
+                          
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12)),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(7.0),
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Call',
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(
+                                    Icons.call,
+                                    size: 30,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
                     ),
                   ],
                 ),

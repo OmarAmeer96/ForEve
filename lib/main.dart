@@ -30,9 +30,9 @@ class ForEve extends StatelessWidget {
       routes: {
         SignInScreen.id: (context) => SignInScreen(),
         SignUpScreen.id: (context) => const SignUpScreen(),
-        HomeScreen.id: (context) => HomeScreen(),
+        HomeScreen.id: (context) => const HomeScreen(),
         ContactScreen.id: (context) => const ContactScreen(),
-        PreMeetingScreen.id: (context) => const PreMeetingScreen(),
+        PreMeetingScreen.id: (context) => PreMeetingScreen(),
 
         BarbaraLFredrickson.id: (context) => const BarbaraLFredrickson(),
         RobertJPlomin.id: (context) => const RobertJPlomin(),

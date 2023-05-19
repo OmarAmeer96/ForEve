@@ -7,7 +7,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key});
+  // ignore: use_key_in_widget_constructors
+  const HomeScreen({Key? key});
 
   static String id = 'HomeScreen';
 
