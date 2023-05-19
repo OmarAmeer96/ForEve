@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:for_eve/screens/contact_screen.dart';
+import 'package:for_eve/screens/meeting_screen.dart';
+import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/widgets/custom_container.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key});
+// ignore: must_be_immutable
+class HomeScreen extends StatefulWidget {
+  HomeScreen({Key? key});
 
   static String id = 'HomeScreen';
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  double _sliderValue = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +30,7 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context) => [
             const PopupMenuItem(
               value: 1,
-              child: Text('Button 1'),
+              child: Text('Start Meeting'),
             ),
             const PopupMenuItem(
               value: 2,
@@ -28,20 +38,26 @@ class HomeScreen extends StatelessWidget {
             ),
             const PopupMenuItem(
               value: 3,
-              child: Text('Button 3'),
+              child: Text(
+                'Log Out',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
           onSelected: (int value) {
             // Handle button press
             switch (value) {
               case 1:
-                // Do something when Button 1 is pressed
+                Navigator.pushNamed(context, MeetingScreen.id);
                 break;
               case 2:
                 // Do something when Button 2 is pressed
                 break;
               case 3:
-                // Do something when Button 3 is pressed
+                Navigator.pushNamed(context, SignInScreen.id);
                 break;
             }
           },
@@ -94,187 +110,237 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
-              Container(
-                width: double.infinity,
-                height: 140,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                ),
-                child: const Column(
+              Expanded(
+                child: ListView(
                   children: [
-                    Spacer(
-                      flex: 2,
+                    const SizedBox(
+                      height: 20,
                     ),
-                    Text(
-                      'Quote of the day',
-                      style: TextStyle(
-                        color: Color(0xff493b8f),
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
+                    Container(
+                      width: double.infinity,
+                      height: 140,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                      ),
+                      child: const Column(
+                        children: [
+                          Spacer(
+                            flex: 2,
+                          ),
+                          Text(
+                            'Quote of the day',
+                            style: TextStyle(
+                              color: Color(0xff493b8f),
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Spacer(
+                            flex: 3,
+                          ),
+                          Text(
+                            textAlign: TextAlign.center,
+                            "\"There is hope, even when your brain tells you there isn't.\"",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          Spacer(
+                            flex: 3,
+                          ),
+                        ],
                       ),
                     ),
-                    Spacer(
-                      flex: 3,
+                    const SizedBox(
+                      height: 20,
                     ),
-                    Text(
-                      "\"There is hope, even when your",
-                      style: TextStyle(fontSize: 20),
+                    Container(
+                      width: double.infinity,
+                      height: 280,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                      ),
+                      child: Column(
+                        children: [
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          const Text(
+                            'Mood Tracker',
+                            style: TextStyle(
+                              color: Color(0xff493b8f),
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Sat',
+                                icon: FontAwesomeIcons.faceSmileBeam,
+                              ),
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Sun',
+                                icon: FontAwesomeIcons.faceFlushed,
+                              ),
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Mon',
+                                icon: FontAwesomeIcons.faceSadTear,
+                              ),
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Tue',
+                                icon: FontAwesomeIcons.faceDizzy,
+                              ),
+                            ],
+                          ),
+                          const Spacer(
+                            flex: 1,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Wed',
+                                icon: FontAwesomeIcons.faceFrown,
+                              ),
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Thu',
+                                icon: FontAwesomeIcons.faceGrimace,
+                              ),
+                              CustomContainer(
+                                height: 90,
+                                width: 65,
+                                text: 'Fri',
+                                icon: FontAwesomeIcons.question,
+                              ),
+                            ],
+                          ),
+                          const Spacer(
+                            flex: 2,
+                          ),
+                        ],
+                      ),
                     ),
-                    Text(
-                      "brain tells you there isn't.\"",
-                      style: TextStyle(fontSize: 20),
+                    const SizedBox(
+                      height: 20,
                     ),
-                    Spacer(
-                      flex: 3,
+                    Container(
+                      width: double.infinity,
+                      height: 220,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                      ),
+                      child: Column(
+                        children: [
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          const Text(
+                            'How are you feeling today?',
+                            style: TextStyle(
+                              color: Color(0xff493b8f),
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomContainer(
+                                height: 110,
+                                width: 85,
+                                text: 'Very Good',
+                                icon: FontAwesomeIcons.faceLaugh,
+                              ),
+                              CustomContainer(
+                                height: 110,
+                                width: 85,
+                                text: 'Good',
+                                icon: FontAwesomeIcons.faceSmileBeam,
+                              ),
+                              CustomContainer(
+                                height: 110,
+                                width: 85,
+                                text: 'Sad',
+                                icon: FontAwesomeIcons.faceFrown,
+                              ),
+                            ],
+                          ),
+                          const Spacer(
+                            flex: 3,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 220,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
+                      ),
+                      child: Column(
+                        children: [
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          const Text(
+                            textAlign: TextAlign.center,
+                            'On a measure of 0 to 10, How are you feeling today?',
+                            style: TextStyle(
+                              color: Color(0xff493b8f),
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const Spacer(
+                            flex: 2,
+                          ),
+                          Slider(
+                            value: _sliderValue,
+                            min: 0,
+                            max: 10,
+                            onChanged: (newValue) {
+                              setState(() {
+                                _sliderValue = newValue;
+                              });
+                            },
+                          ),
+                          Text('Slider Value: $_sliderValue'),
+                          const Spacer(
+                            flex: 3,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),
-              ),
-              const Spacer(
-                flex: 1,
-              ),
-              Container(
-                width: double.infinity,
-                height: 280,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                ),
-                child: Column(
-                  children: [
-                    const Spacer(
-                      flex: 2,
-                    ),
-                    const Text(
-                      'Mood Tracker',
-                      style: TextStyle(
-                        color: Color(0xff493b8f),
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const Spacer(
-                      flex: 2,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Sat',
-                          icon: FontAwesomeIcons.faceSmileBeam,
-                        ),
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Sun',
-                          icon: FontAwesomeIcons.faceFlushed,
-                        ),
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Mon',
-                          icon: FontAwesomeIcons.faceSadTear,
-                        ),
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Tue',
-                          icon: FontAwesomeIcons.faceDizzy,
-                        ),
-                      ],
-                    ),
-                    const Spacer(
-                      flex: 1,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Wed',
-                          icon: FontAwesomeIcons.faceFrown,
-                        ),
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Thu',
-                          icon: FontAwesomeIcons.faceGrimace,
-                        ),
-                        CustomContainer(
-                          height: 90,
-                          width: 65,
-                          text: 'Fri',
-                          icon: FontAwesomeIcons.question,
-                        ),
-                      ],
-                    ),
-                    const Spacer(
-                      flex: 2,
-                    ),
-                  ],
-                ),
-              ),
-              const Spacer(
-                flex: 1,
-              ),
-              Container(
-                width: double.infinity,
-                height: 220,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                ),
-                child: Column(
-                  children: [
-                    const Spacer(
-                      flex: 2,
-                    ),
-                    const Text(
-                      'How are you feeling today?',
-                      style: TextStyle(
-                        color: Color(0xff493b8f),
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const Spacer(
-                      flex: 2,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomContainer(
-                          height: 110,
-                          width: 85,
-                          text: 'Very Good',
-                          icon: FontAwesomeIcons.faceLaugh,
-                        ),
-                        CustomContainer(
-                          height: 110,
-                          width: 85,
-                          text: 'Good',
-                          icon: FontAwesomeIcons.faceSmileBeam,
-                        ),
-                        CustomContainer(
-                          height: 110,
-                          width: 85,
-                          text: 'Sad',
-                          icon: FontAwesomeIcons.faceFrown,
-                        ),
-                      ],
-                    ),
-                    const Spacer(
-                      flex: 3,
-                    ),
-                  ],
-                ),
-              ),
-              const Spacer(
-                flex: 3,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -339,7 +405,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
