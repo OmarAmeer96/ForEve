@@ -8,6 +8,7 @@ import 'package:for_eve/screens/Robert_Trivers_screen.dart';
 import 'package:for_eve/screens/Susan_Blackmore_screen.dart';
 import 'package:for_eve/screens/contact_screen.dart';
 import 'package:for_eve/screens/home_screen.dart';
+import 'package:for_eve/screens/meeting_screen.dart';
 import 'package:for_eve/screens/pre_meeting_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/screens/signup_screen.dart';
@@ -33,13 +34,13 @@ class ForEve extends StatelessWidget {
         HomeScreen.id: (context) => const HomeScreen(),
         ContactScreen.id: (context) => const ContactScreen(),
         PreMeetingScreen.id: (context) => PreMeetingScreen(),
-
         BarbaraLFredrickson.id: (context) => const BarbaraLFredrickson(),
         RobertJPlomin.id: (context) => const RobertJPlomin(),
         RobertSternberg.id: (context) => const RobertSternberg(),
         RobertTrivers.id: (context) => const RobertTrivers(),
         SusanBlackmore.id: (context) => const SusanBlackmore(),
         PaulEkman.id: (context) => const PaulEkman(),
+        MeetingScreen.id: (context) => const MeetingScreen(),
       },
       debugShowCheckedModeBanner: false,
       initialRoute: 'SignInScreen',

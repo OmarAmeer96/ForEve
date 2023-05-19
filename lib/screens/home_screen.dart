@@ -33,10 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
               value: 1,
               child: Text('Start Meeting'),
             ),
-            const PopupMenuItem(
-              value: 2,
-              child: Text('Button 2'),
-            ),
+            // const PopupMenuItem(
+            //   value: 2,
+            //   child: Text('Button 2'),
+            // ),
             const PopupMenuItem(
               value: 3,
               child: Text(
@@ -54,9 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
               case 1:
                 Navigator.pushNamed(context, PreMeetingScreen.id);
                 break;
-              case 2:
-                // Do something when Button 2 is pressed
-                break;
+              // case 2:
+              //   // Do something when Button 2 is pressed
+              //   break;
               case 3:
                 Navigator.pushNamed(context, SignInScreen.id);
                 break;

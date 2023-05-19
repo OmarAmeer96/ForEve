@@ -6,6 +6,7 @@ import 'package:for_eve/screens/Robert_J_Plomin_screen.dart';
 import 'package:for_eve/screens/Robert_Sternberg_screen.dart';
 import 'package:for_eve/screens/Robert_Trivers_screen.dart';
 import 'package:for_eve/screens/Susan_Blackmore_screen.dart';
+import 'package:for_eve/screens/meeting_screen.dart';
 import 'package:for_eve/widgets/custom_therapist_card.dart';
 import 'contact_screen.dart';
 
@@ -13,7 +14,7 @@ import 'contact_screen.dart';
 class PreMeetingScreen extends StatefulWidget {
   PreMeetingScreen({Key? key}) : super(key: key);
 
-  static String id = 'MeetingScreen';
+  static String id = 'PreMeetingScreen';
 
   @override
   // ignore: library_private_types_in_public_api
@@ -344,13 +345,12 @@ class _PreMeetingScreenState extends State<PreMeetingScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: GestureDetector(
                         onTap: () {
-                          
+                          Navigator.pushNamed(context, MeetingScreen.id);
                         },
                         child: Container(
                           decoration: const BoxDecoration(
                             color: Colors.blue,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(12)),
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
                           ),
                           child: const Padding(
                             padding: EdgeInsets.all(7.0),
@@ -359,7 +359,7 @@ class _PreMeetingScreenState extends State<PreMeetingScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Call',
+                                    'Submit',
                                     style: TextStyle(
                                       fontSize: 24,
                                       color: Colors.white,
@@ -370,7 +370,7 @@ class _PreMeetingScreenState extends State<PreMeetingScreen> {
                                     width: 10,
                                   ),
                                   Icon(
-                                    Icons.call,
+                                    Icons.done,
                                     size: 30,
                                     color: Colors.white,
                                   )
