@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'home_screen.dart';
-
 class ContactScreen extends StatelessWidget {
   const ContactScreen({super.key});
 
@@ -34,7 +32,8 @@ class ContactScreen extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.only(top: 25, left: 16, right: 16),
+          padding:
+              const EdgeInsets.only(top: 25, left: 16, right: 16, bottom: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -215,7 +214,7 @@ class ContactScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(3.0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, HomeScreen.id);
+                        Navigator.pop(context);
                       },
                       child: Container(
                         width: 100,
@@ -254,23 +253,18 @@ class ContactScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(3.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, ContactScreen.id);
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 65,
-                        decoration: const BoxDecoration(
-                          color: Color(0xffa69fbd),
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
-                        child: const Center(
-                          child: FaIcon(
-                            Icons.chat,
-                            size: 55,
-                            color: Colors.white,
-                          ),
+                    child: Container(
+                      width: 100,
+                      height: 65,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffa69fbd),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      child: const Center(
+                        child: FaIcon(
+                          Icons.chat,
+                          size: 55,
+                          color: Colors.white,
                         ),
                       ),
                     ),

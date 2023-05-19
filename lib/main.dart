@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:for_eve/screens/contact_screen.dart';
 import 'package:for_eve/screens/home_screen.dart';
-import 'package:for_eve/screens/meeting_screen.dart';
+import 'package:for_eve/screens/pre_meeting_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/screens/signup_screen.dart';
 import 'firebase_options.dart';
@@ -26,7 +26,7 @@ class ForEve extends StatelessWidget {
         SignUpScreen.id: (context) => const SignUpScreen(),
         HomeScreen.id: (context) => HomeScreen(),
         ContactScreen.id: (context) => const ContactScreen(),
-        MeetingScreen.id: (context) => const MeetingScreen(),
+        PreMeetingScreen.id: (context) => const PreMeetingScreen(),
       },
       debugShowCheckedModeBanner: false,
       initialRoute: 'SignInScreen',

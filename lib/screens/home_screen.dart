@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:for_eve/screens/contact_screen.dart';
-import 'package:for_eve/screens/meeting_screen.dart';
+import 'package:for_eve/screens/pre_meeting_screen.dart';
 import 'package:for_eve/screens/signin_screen.dart';
 import 'package:for_eve/widgets/custom_container.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // Handle button press
             switch (value) {
               case 1:
-                Navigator.pushNamed(context, MeetingScreen.id);
+                Navigator.pushNamed(context, PreMeetingScreen.id);
                 break;
               case 2:
                 // Do something when Button 2 is pressed
@@ -329,7 +329,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               });
                             },
                           ),
-                          Text('Slider Value: $_sliderValue'),
+                          Text(
+                            '${_sliderValue.toInt()}',
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                           const Spacer(
                             flex: 3,
                           ),
